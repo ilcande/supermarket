@@ -29,10 +29,11 @@ class Checkout
 
   def price_for_items(code, items)
     pricing_rule = @pricing_rules[code]
-    items.first.price * items.size unless pricing_rule
+    return items.first.price * items.size unless pricing_rule
 
-    # Using Factory pattern to get the correct discount strategy based on the pricing rule
-    # TODO: Implement the DiscountFactory class
+    # Using DiscountFactory factory pattern to apply discount based on pricing rule
+    discount = DiscountFactory.create_discount(pricing_rule)
+    discount.apply(items)
   end
 
   def apply_basket_discount(total)
