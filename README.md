@@ -32,9 +32,3 @@ Here are some examples:
 | C, B, A, A, C, B, C | £189 |
 
 When designing your solution keep in mind that a supermarket might want to add new discounts in the future.  What programming principle(s) should you follow to make the process of adding new discounts as straightforward as possible?  Say a new developer takes over from where you left off, and the supermarket needs to make some changes to the system, what (in terms of code design) would best set this new developer up to succeed?  Your design should reflect how you would answer these sorts of questions.
-
-Write tests to make sure your code works. Commit often so we can follow the decisions you made.  Unless you have a very good reason to incorporate rails, a db, or provide a cli, please focus on a PORO solution.
-
-## Submitting your solution
-
-Please create a new branch and create a pull request into master. If you have any questions please email radu@zeneducate.com
